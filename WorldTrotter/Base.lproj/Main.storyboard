@@ -91,20 +91,6 @@
             </objects>
             <point key="canvasLocation" x="1154" y="394"/>
         </scene>
-        <!--Map-->
-        <scene sceneID="a0m-gJ-H0S">
-            <objects>
-                <viewController title="Map" id="3cy-ET-Zx9" customClass="MapViewController" customModule="WorldTrotter" customModuleProvider="target" sceneMemberID="viewController">
-                    <mapView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="xYo-7h-Iyz">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </mapView>
-                    <tabBarItem key="tabBarItem" title="Map" image="MapIcon" id="PWU-pr-HDb"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gGj-Wh-VMx" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2620" y="-161.46926536731635"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="YWu-wm-PGU">
             <objects>
@@ -115,7 +101,6 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="3cy-ET-Zx9" kind="relationship" relationship="viewControllers" id="AUT-5Y-8IT"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="gS0-9c-wIC"/>
                     </connections>
                 </tabBarController>
@@ -126,6 +111,5 @@
     </scenes>
     <resources>
         <image name="ConvertIcon" width="48.5" height="32.5"/>
-        <image name="MapIcon" width="48.5" height="32.5"/>
     </resources>
 </document>
