@@ -32,6 +32,37 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
     
     
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+        // get the hour component of the current time
+        let calendar = Calendar(identifier: Calendar.Identifier.iso8601)
+        let currentHour = calendar.component(.hour, from: Date())
+        
+        
+        
+        // Define my colors, including the random color generator at dusk
+        let darkColor = UIColor(red: 13/255.0, green: 61/255.0, blue: 91/255.0, alpha: 1.0)
+        let morningColor = UIColor(red: 250/255.0, green: 150/255.0, blue: 12/255.0, alpha: 0.6)
+        let dayColor = UIColor(red: 255/255.0, green: 255/255.0, blue: 150/255.0, alpha: 1.0)
+        
+        // Switch colors based on the hour of the day
+        switch currentHour {
+        case 7...10:
+            view.backgroundColor = morningColor
+        case 11...16:
+            view.backgroundColor = dayColor
+        default:
+            view.backgroundColor = darkColor
+        }
+        
+    }
+    
+    
+    
+    
+    
+    
+    
     @IBAction func fahrenheitFieldEditingChanged(_ textField: UITextField) {
         
         if let text = textField.text, let value = Double(text) {
