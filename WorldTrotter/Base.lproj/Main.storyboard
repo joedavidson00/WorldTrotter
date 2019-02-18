@@ -89,7 +89,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1154" y="394"/>
+            <point key="canvasLocation" x="1105" y="606"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="YWu-wm-PGU">
@@ -97,17 +97,19 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="jrK-w7-hGz" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mZa-Ee-aLo">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="gS0-9c-wIC"/>
                         <segue destination="aJh-uh-NPa" kind="relationship" relationship="viewControllers" id="qIN-dn-BZj"/>
+                        <segue destination="P89-sH-gfB" kind="relationship" relationship="viewControllers" id="aOO-Bx-Heb"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wwe-XJ-IaQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1210" y="-492"/>
+            <point key="canvasLocation" x="1106" y="-419"/>
         </scene>
         <!--Map-->
         <scene sceneID="EwP-uR-Boh">
@@ -123,7 +125,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZPB-2Z-R1I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2199" y="-101"/>
+            <point key="canvasLocation" x="2302" y="606"/>
+        </scene>
+        <!--Web View-->
+        <scene sceneID="xsY-a3-nno">
+            <objects>
+                <viewController id="P89-sH-gfB" userLabel="Web View" customClass="WebViewController" customModule="WorldTrotter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Sla-d9-hlq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="3vx-Ig-gEf"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Web Page" id="OZi-FN-jOn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ElJ-xX-xBA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-34" y="606"/>
         </scene>
     </scenes>
     <resources>
