@@ -9,9 +9,11 @@
 import UIKit
 import MapKit
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, MKMapViewDelegate {
     
-    var mapView: MKMapView!
+    var mapView = MKMapView()
+    
+
     
     @objc func mapTypeChanged(_ segControl: UISegmentedControl) {
         switch segControl.selectedSegmentIndex {
@@ -52,6 +54,9 @@ class MapViewController: UIViewController {
         
         
         segmentedControl.addTarget(self, action: #selector(MapViewController.mapTypeChanged(_:)), for: .valueChanged)
+        mapView.delegate = self
+        mapView.isZoomEnabled = true
+        mapView.showsUserLocation = true
         
     }
     override func viewDidLoad() {
@@ -59,10 +64,17 @@ class MapViewController: UIViewController {
         print("MapViewController loaded its view.")
     }
     
-    //override func viewDidAppear(_) { do silver challenge, dark mode pg 101
     
     
-
+    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
+        let latitude = userLocation.coordinate.latitude
+        let longitude = userLocation.coordinate.longitude
+        let center = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+        let region = MKCoordinateRegion(center: center, span: span)
+        
+        mapView.setRegion(region, animated: true)
+    }
     
 }
 
